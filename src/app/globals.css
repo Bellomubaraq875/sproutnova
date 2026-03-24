@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+/* ------------------------------------------ */
+/* SproutNova Theme Variables                 */
+/* ------------------------------------------ */
+:root {
+  /* Fonts */
+  --font-regina: "Regina", "Inter", system-ui, sans-serif;
+  --font-jost: "Jost", "Inter", system-ui, sans-serif;
+
+  /* Primary */
+  --green-primary: #16A34A;
+  --green-light: #4ADE80;
+  --green-dark: #166534;
+
+  /* Accent */
+  --yellow: #FACC15;
+  --yellow-soft: #FEF08A;
+  --orange: #F97316;
+  --blue-accent: #2563EB;
+
+  /* Status */
+  --red: #DC2626;
+
+  /* Neutrals */
+  --neutral-900: #111827;
+  --neutral-700: #374151;
+  --neutral-500: #6B7280;
+  --neutral-200: #E5E7EB;
+  --neutral-50: #F9FAFB;
+}
+
+/* ------------------------------------------ */
+/* Base Styles                                */
+/* ------------------------------------------ */
+@layer base {
+  @font-face {
+    font-family: "Regina";
+    src: url("/fonts/Regina-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-jost);
+    background-color: var(--neutral-50);
+    color: var(--neutral-900);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Headings using Regina font */
+  h1, h2, h3, .font-display {
+    font-family: var(--font-regina);
+    margin: 0;
+    font-weight: 400; /* Regina is usually designed as a display font */
+    color: var(--neutral-900);
+    letter-spacing: -0.02em;
+  }
+
+  h4, h5, h6 {
+    font-family: var(--font-jost);
+    margin: 0;
+    font-weight: 600;
+  }
+
+  p {
+    color: var(--neutral-700);
+    line-height: 1.6;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--blue-accent);
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--green-primary);
+  }
+}
+
+/* ------------------------------------------ */
+/* Reusable Utility Classes                   */
+/* ------------------------------------------ */
+@layer components {
+  /* Backgrounds */
+  .bg-primary { background-color: var(--green-primary); }
+  .bg-light { background-color: var(--green-light); }
+  .bg-dark { background-color: var(--green-dark); }
+
+  /* Text */
+  .text-primary { color: var(--green-primary); }
+  .text-muted { color: var(--neutral-500); }
+
+  /* Card */
+  .card {
+    @apply bg-white p-6 shadow-sm border border-neutral-200;
+    border-radius: 0.75rem;
+  }
+
+  /* Buttons - Updated to Pill shape per your Brand Design */
+  .btn {
+    @apply px-8 py-3 font-semibold transition-all duration-200 inline-flex items-center justify-center;
+    border-radius: 9999px;
+  }
+
+  .btn-primary {
+    @apply bg-[#166534] text-[#FACC15]; /* Using Green Dark + Yellow per ref image */
+  }
+
+  .btn-primary:hover {
+    @apply opacity-90 scale-[1.02];
+  }
+
+  /* Badges */
+  .badge {
+    @apply px-3 py-1 text-xs font-medium rounded-full;
+  }
+  .badge-success { background: var(--green-primary); color: white; }
+  .badge-warning { background: var(--yellow); color: #000; }
+  .badge-danger { background: var(--red); color: white; }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--neutral-50);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--neutral-200);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--green-primary);
+  }
+}
+
+/* -------------------- */
+/* Animations           */
+/* -------------------- */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
