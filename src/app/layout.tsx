@@ -13,9 +13,9 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "LAB Foundation",
+  title: "SproutNova - Empowering Farmers with AI-Driven Solutions",
   description:
-    "LAB Foundation provides food, shelter, education, and healthcare to vulnerable communities across 120+ countries.",
+    "SproutNova provides AI-driven solutions to empower farmers and improve agricultural outcomes.",
   icons: {
     icon: "/logo/favicon.png",
     shortcut: "/logo/favicon.png",
