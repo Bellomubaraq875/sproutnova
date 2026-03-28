@@ -6,6 +6,7 @@ import Newsletter from "./components/section/Newsletter"
 import FeatureSection from "./components/section/FeatureSection"
 import HowItWorks from "./components/section/HowItWorks"
 import DashboardPreview from "./components/section/DashboardPreview"
+import CTA from "./components/section/CTA"
 
 
 export default function HomePage() {
@@ -15,11 +16,12 @@ export default function HomePage() {
       <MissionSection />
       <Problem/>
    
-      <Newsletter />
+      {/* <Newsletter /> */}
       <FeatureSection/>
       <HowItWorks/>
       <DashboardPreview/>
-      {/* <Newsletter/> */}
+      <CTA/>
+      <Newsletter/>
     </>
   );
 }
