@@ -46,14 +46,14 @@ const features = [
     title: "Soil Analysis",
     desc: "Understand soil composition and improve fertility using data-driven chemical insights.",
     icon: <TestTube2 className="text-green-primary" size={24} />,
-    image: "https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?q=80&w=800&auto=format&fit=crop",
+    image: "/images/soiltest.png",
     tag: "Nutrient Check"
   },
   {
     title: "Smart Alerts",
     desc: "Receive urgent alerts on weather risks, diseases, and important farm activities.",
     icon: <BellRing className="text-green-primary" size={24} />,
-    image: "https://images.unsplash.com/photo-1563911302283-d2bc129e7370?q=80&w=800&auto=format&fit=crop",
+    image: "/images/smartalert.png",
     tag: "Push Notify"
   },
 ];
