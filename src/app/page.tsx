@@ -7,6 +7,7 @@ import FeatureSection from "./components/section/FeatureSection"
 import HowItWorks from "./components/section/HowItWorks"
 import DashboardPreview from "./components/section/DashboardPreview"
 import CTA from "./components/section/CTA"
+import Solution from "./components/section/Solution"
 
 
 export default function HomePage() {
@@ -15,7 +16,7 @@ export default function HomePage() {
       <HeroSection />
       <MissionSection />
       <Problem/>
-   
+      <Solution/>
       {/* <Newsletter /> */}
       <FeatureSection/>
       <HowItWorks/>

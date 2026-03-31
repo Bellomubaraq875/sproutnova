@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, Variants} from "framer-motion";
 import { ScanFace, ArrowRight, Leaf, ShieldCheck } from 'lucide-react';
 
 export default function About() {
@@ -45,7 +45,7 @@ export default function About() {
         {/* Small Breezy Leaves - Green/Grey Theme */}
         {/* Grey Leaf (Left Center) */}
         <motion.div
-          variants={leafVariants}
+          variants={leafVariants as any}
           animate="breeze"
           custom={0.5}
           className="absolute top-[25%] left-[10%] text-neutral-400/20"
@@ -55,7 +55,8 @@ export default function About() {
 
         {/* Green Leaf (Right Center) */}
         <motion.div
-          variants={leafVariants}
+          
+          variants={leafVariants as any}
           animate="breeze"
           custom={1.2}
           className="absolute top-[50%] right-[15%] text-green-primary/10"
@@ -65,7 +66,7 @@ export default function About() {
 
         {/* Grey Leaf (Far Right Top) */}
         <motion.div
-          variants={leafVariants}
+          variants={leafVariants as any}
           animate="breeze"
           custom={2}
           className="absolute top-[15%] right-[30%] text-neutral-200/40"
