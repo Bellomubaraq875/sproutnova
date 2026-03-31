@@ -18,14 +18,20 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation Links - Centered */}
-        <div className="hidden md:flex items-center gap-10">
-          <Link href="/" className="text-[#064E3B] font-bold text-sm hover:opacity-70 transition">
+        {/* Desktop Links */}
+        <div className="hidden md:flex items-center gap-8 text-neutral-700 font-bold">
+          <Link href="/" className="hover:text-green-600 transition">
             Home
           </Link>
-          <NavLink href="/about">About us</NavLink>
-          <NavLink href="/services">Service</NavLink>
-          <NavLink href="/projects">Project</NavLink>
-          <NavLink href="/contact">Contact Us</NavLink>
+          <Link href="/features" className="hover:text-green-600 transition">
+            Features
+          </Link>
+          <Link href="#" className="hover:text-green-600 transition">
+            Dashboard
+          </Link>
+          <Link href="#" className="hover:text-green-600 transition">
+            Disease AI
+          </Link>
         </div>
 
         {/* Action Button - Pill Shaped */}
@@ -50,10 +56,10 @@ export default function Navbar() {
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl p-6 flex flex-col gap-6 md:hidden animate-in fade-in slide-in-from-top-2">
-          <Link href="/" className="text-[#064E3B] font-bold">Home</Link>
-          <Link href="/about" className="text-gray-600 font-medium">About us</Link>
-          <Link href="/services" className="text-gray-600 font-medium">Service</Link>
-          <Link href="/contact" className="text-gray-600 font-medium">Contact</Link>
+          <Link href="/" className="block">Home</Link>
+          <Link href="/features" className="block">Features</Link>
+          <Link href="#" className="block">Dashboard</Link>
+          <Link href="#" className="block">Disease AI</Link>
           <Link
             href="/register"
             className="bg-[#064E3B] text-center text-[#FACC15] py-3 rounded-full font-bold"
