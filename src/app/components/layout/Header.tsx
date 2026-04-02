@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import FeaturesPage from "@/app/features/page";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

@@ -104,7 +104,7 @@ export default function Solution() {
                                 {/* 3. STATIC Real Image Center */}
                                 <div className="absolute inset-[30px] md:inset-[50px] rounded-full overflow-hidden border-[12px] border-white shadow-2xl z-30 group">
                                     <Image
-                                        src="https://images.unsplash.com/photo-1599549336123-57a627038753?q=80&w=1200&auto=format&fit=crop"
+                                        src="/images/smartsolution.png"
                                         alt="Healthy Crop Scan"
                                         fill
                                         className="object-cover group-hover:scale-110 transition-transform duration-1000"
@@ -168,7 +168,7 @@ export default function Solution() {
                             </div>
                         </motion.div>
 
-                    </div>
+                    </div>  
                 </div>
             </div>
         </section>

@@ -1,12 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    domains: ['googleusercontent.com'], 
+
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "pyvotalehub-backend.onrender.com",
-        pathname: "/**",
-      },
       {
         protocol: "https",
         hostname: "images.unsplash.com",

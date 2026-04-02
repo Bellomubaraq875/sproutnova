@@ -3,7 +3,7 @@ import { Jost } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
-import { I18nProvider } from "./providers";
+
 
 const jost = Jost({
   subsets: ["latin"],
@@ -27,12 +27,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html className={jost.variable}>
       <body className="font-sans antialiased bg-white text-gray-900">
-        {/* I18nProvider handles dynamic lang internally */}
-        <I18nProvider>
+       
           <Header />
           <main>{children}</main>
           <Footer />
-        </I18nProvider>
+       
       </body>
     </html>
   );
