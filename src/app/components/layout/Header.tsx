@@ -30,7 +30,7 @@ export default function Navbar() {
           <Link href="#" className="hover:text-green-600 transition">
             Dashboard
           </Link>
-          <Link href="#" className="hover:text-green-600 transition">
+          <Link href="/disease" className="hover:text-green-600 transition">
             Disease AI
           </Link>
         </div>
